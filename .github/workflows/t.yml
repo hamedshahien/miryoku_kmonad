@@ -1,0 +1,27 @@
+name: 'Build t'
+on:
+  - workflow_dispatch
+jobs:
+  build:
+    if: github.repository_owner == 'manna-harbour'
+    uses: ./.github/workflows/main.yml
+    with:
+      mode: '["build"]'
+      alphas: '[
+        "dvorak"
+        ]'
+      nav: '[
+        "default"
+      ]'
+      clipboard: '[
+        "mac"
+      ]'
+      layers: '[
+        "default"
+      ]'
+      mapping: '[
+        "default"
+      ]'
+      kmonad_os: '[
+        "mac"
+      ]'
